@@ -1,0 +1,61 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f1411388df2, pid=512364, tid=512405
+#
+# JRE version: OpenJDK Runtime Environment (11.0.20.1+1) (build 11.0.20.1+1-post-Ubuntu-0ubuntu122.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.20.1+1-post-Ubuntu-0ubuntu122.04, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libGLdispatch.so.0+0x40df2]
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:42105 --module-path=/home/trevorj/Documents/javaFX/openjfx-17.0.8_linux-x64_bin-sdk/javafx-sdk-17.0.8/lib --add-modules=javafx.controls,javafx.fxml MovingCar
+
+Host: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz, 4 cores, 15G, Ubuntu 22.04.3 LTS
+Time: Mon Oct 23 11:15:01 2023 EDT elapsed time: 36.235374 seconds (0d 0h 0m 36s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f143c2fd800):  JavaThread "QuantumRenderer-0" daemon [_thread_in_native, id=512405, stack(0x00007f14117fe000,0x00007f14118fe000)]
+
+Stack: [0x00007f14117fe000,0x00007f14118fe000],  sp=0x00007f14118fc4a0,  free space=1017k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libGLdispatch.so.0+0x40df2]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 1603  com.sun.prism.es2.X11GLContext.nMakeCurrent(JJ)V javafx.graphics (0 bytes) @ 0x00007f142c161a94 [0x00007f142c161a40+0x0000000000000054]
+J 2181 c2 com.sun.javafx.tk.quantum.PresentingPainter.run()V javafx.graphics (680 bytes) @ 0x00007f142c2121a4 [0x00007f142c211ea0+0x0000000000000304]
+J 2169 c2 com.sun.javafx.tk.RenderJob.run()V javafx.graphics (92 bytes) @ 0x00007f142c205914 [0x00007f142c2057e0+0x0000000000000134]
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+92 java.base@11.0.20.1
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5 java.base@11.0.20.1
+j  com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run()V+8 javafx.graphics
+j  java.lang.Thread.run()V+11 java.base@11.0.20.1
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000018
+
+Register to memory mapping:
+
+RAX=0x0 is NULL
+RBX=0x00000000f13cc039 is an unknown value
+RCX=0x0 is NULL
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007f14118fc4a0 is pointing into the stack for thread: 0x00007f143c2fd800
+RBP=0x00007f13cc6780e0 points into unknown readable memory: 0x00007f143d5b4218 | 18 42 5b 3d 14 7f 00 00
+RSI=0x0000000000000001 is an unknown value
+RDI=0x0 is NULL
+R8 =0x0 is NULL
+R9 =0x0 is NULL
+R10=0x00007f13cc0527e0 points into unknown readable memory: 0x0000000000000020 | 20 00 00 00 00 00 00 00
+R11=0x00007f13cc000090 points into unknown readable memory: 0x00007f13cc6a0840 | 40 08 6a cc 13 7f 00 00
+R12=0x0 is NULL
+R13=0x00007f13cc039b38 points into unknown readable memory: 0x00007f14110a1ca0 | a0 1c 0a 11 14 7f
