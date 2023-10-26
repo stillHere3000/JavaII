@@ -12,7 +12,7 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Line;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.ComboBox;
 import javafx.collections.*;
@@ -34,7 +34,7 @@ public class LunchMenu extends Application {
     private ComboBox<String> cbo= new ComboBox<>();
     private String[] menuItems= {"Please Select an Item","Hot, Dog", "Sandwich", "Hamburger"};
     BorderPane paneforCombox= new BorderPane();
-    private TextArea priceBox= new TextArea("0.00");
+    private TextField priceBox= new TextField("0.00");
     private double totalPrice= 0.00; double foodPrice, drinkPrice= 0.00;
     private int selectedDrink= -1;
     private Boolean drinkSelected= false;
