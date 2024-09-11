@@ -3,8 +3,8 @@
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
 ## Repo Structure
-[Java Samples](https://github.com/stillHere3000/JavaII/tree/Java_Samples)
-[labEight](https://github.com/stillHere3000/JavaII/tree/labEight)
+-  [Java Samples](https://github.com/stillHere3000/JavaII/tree/Java_Samples) 
+-  [labEight](https://github.com/stillHere3000/JavaII/tree/labEight)
 [Labseven-LunchMenu](https://github.com/stillHere3000/JavaII/tree/Labseven-LunchMenu)
 [Assignment7](https://github.com/stillHere3000/JavaII/tree/Assignment7)
 [Assignment6](https://github.com/stillHere3000/JavaII/tree/Assignment6)
